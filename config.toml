@@ -11,11 +11,11 @@ googleAnalytics= "G-29Q9879HZ5"
     languageCode = "en-US"
     languageName = "English"
     description = "Briefschmerz is the pain of receiving a letter in Germany."
-  [languages.de]
-    weight = 2
-    languageCode = "de-DE"
-    languageName = "Deutsch"
-    description = "Briefschmerz is the pain of receiving a letter in Germany."
+  # [languages.de]
+  #   weight = 2
+  #   languageCode = "de-DE"
+  #   languageName = "Deutsch"
+  #   description = "Briefschmerz is the pain of receiving a letter in Germany."
   [languages.pt]
     weight = 3
     languageCode = "pt-BR"
