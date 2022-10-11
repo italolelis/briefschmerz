@@ -22,6 +22,7 @@ googleAnalytics= "G-29Q9879HZ5"
     languageName = "Português"
     description = "Briefschmerz é a dor de receber uma carta na Alemanha."
 [params]
+  images = ["images/confidential_letter.svg"]
   copyright = "Based on [nohello.net](https://nohello.net/en/). Images taken from [Undraw](https://undraw.co). Open-source on [GitHub](https://github.com/italolelis/briefschmerz)."
   # Cookie consent config
   [params.cookieconsent]
