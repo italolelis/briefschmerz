@@ -1,0 +1,33 @@
+<footer>
+    <p>
+      {{ .Site.Params.copyright | markdownify }}
+    </p>
+    <p>
+    </p>
+
+    <section class="other-languages">
+      <p>
+        {{ T "footer.languages" }}
+      </p>
+
+      <ul>
+      {{- range .AllTranslations -}}
+        <li
+          ><a
+            href="{{ .RelPermalink }}"
+            class="lang-chooser"
+            data-lang="{{ .RelPermalink }}"
+            hreflang="{{ .RelPermalink }}"
+          >{{- .Language.LanguageName -}}</a
+        ></li>
+      {{- end -}}
+      </ul>
+    </section>
+</footer>
+  
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+{{ $hello := resources.Get "js/hello.js" }}
+{{ $nohello := resources.Get "js/nohello.js" }}
+{{ $js := slice $hello $nohello | resources.Concat "js/bundle.js" }}
+<script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>

@@ -1,0 +1,104 @@
+baseURL = 'http://briefschmerz.de/'
+defaultContentLanguage = 'en'
+
+title = 'Briefschmerz'
+keywords = ["italovietro", "briefschmerz", "pain"]
+googleAnalytics= "G-29Q9879HZ5"
+
+[languages]
+  [languages.en]
+    weight = 1
+    languageCode = "en-US"
+    languageName = "English"
+    description = "Briefschmerz is the pain of receiving a letter in Germany."
+  [languages.de]
+    weight = 2
+    languageCode = "de-DE"
+    languageName = "Deutsch"
+    description = "Briefschmerz is the pain of receiving a letter in Germany."
+  [languages.pt]
+    weight = 3
+    languageCode = "pt-BR"
+    languageName = "Português"
+    description = "Briefschmerz é a dor de receber uma carta na Alemanha."
+[params]
+  copyright = "Based on [nohello.net](https://nohello.net/en/). Images taken from [Undraw](https://undraw.co). Open-source on [GitHub](https://github.com/italolelis/briefschmerz)."
+  # Cookie consent config
+  [params.cookieconsent]
+    enable = false
+    # text strings used for Cookie consent banner
+    [params.cookieconsent.content]
+      message = ""
+      dismiss = ""
+      link = ""
+
+# Markup related configuration in Hugo
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      unsafe = true
+  # Table Of Contents settings
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+# Author config
+[author]
+  name = "Italo Vietro"
+  email = "me@italovietro.com"
+  link = ""
+
+# Sitemap config
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Permalinks config (https://gohugo.io/content-management/urls/#permalinks)
+[Permalinks]
+  posts = ":filename"
+
+# Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
+[privacy]
+  # privacy of the Google Analytics (replaced by params.analytics.google)
+  [privacy.googleAnalytics]
+    # ...
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
+# Options to make output .md files
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["md"]
+
+# Options to make output .md files
+[outputFormats.MarkDown]
+  mediaType = "text/plain"
+  isPlainText = true
+  isHTML = false
+
+# Options to make hugo output files
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]

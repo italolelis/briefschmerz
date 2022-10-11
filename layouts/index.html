@@ -1,0 +1,49 @@
+{{- define "main" -}}
+<div id="wholesite">
+    <div class="container">
+      <div class="hero">
+        <div id="plsstop">
+          <h1 class="name">
+            <span id="briefschmerz">Briefschmerz</span>
+          </h1>
+        </div>
+        <span class="subtitle">{{ T "header.subtitle" }}</span>
+        <h2 class="lead">
+            {{ T "header.introduction" | markdownify }}
+        </h2>
+      </div>
+    </div>
+</div>
+
+<div class="container nonos">
+    <div class="sections sectionleft">
+        <h2 class="section-title">{{ T "title.explanation" }}</h2>
+        <div class="list-card example one">
+            <img src="{{ "images/confidential_letter.svg" | absURL }}" width="130%">
+        </div>
+    </div>
+    <div class="sections sectionright">
+        <div class="list-card">
+          <div>
+            {{ T "body.explanation" | markdownify }}
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="container nonos">
+    <div class="sections sectionleft">
+      <h2 class="section-title">💪 Be strong!</h2>
+      <div class="list-card">
+        <div>
+          {{ T "body.urbandictionary" | markdownify }}
+        </div>
+      </div>
+    </div>
+    <div class="sections sectionright">
+        <div class="list-card example one">
+            <img src = "{{ "images/happy_news.svg" | absURL }}" width="100%" alt="My Happy SVG"/>
+          </div>
+    </div>
+</div>
+{{- end -}}
